@@ -1,0 +1,47 @@
+{
+  "skill_name": "ai-product-competitive-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我要调研国内 AI 陪伴产品，竞品包括豆包、星野、Talkie 和 Character.AI，目标是看它们最近在功能、用户口碑和产品定位上的差异，最后给我一个 Markdown 报告框架。",
+      "expected_output": "Should treat this as public-source AI product competitive research, ask only necessary clarifying questions, avoid entering case testing by default, distinguish product features from public user feedback, and provide a staged research/report framework.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我已经收集了一批小红书和应用商店评论，想分析几个 AI 搜索产品的用户反馈。帮我把这些评论归类成体验主题，并提炼对我们产品的启示。",
+      "expected_output": "Should identify this as public feedback analysis, use a coding-to-theme-to-finding workflow, preserve user quotes when available, separate observations from judgments and recommendations, and mention confidence/sample bias.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "我想比较几个 AI 搜索产品在真实问答里的策略差异，帮我设计一组测试 case。",
+      "expected_output": "Should enter the optional case testing path but not finalize a test set immediately. It should first confirm testing goals and scenario scope, generate candidate scenarios or a draft case set, explicitly label it as a draft, and ask the user to keep/delete/replace/add business-specific cases. It should offer light/standard/deep recording template options instead of forcing one.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "帮我随便看看 ChatGPT 最近有什么新功能。",
+      "expected_output": "Should handle this lightly, not force a full competitive research workflow or case testing. It may ask for timeframe if needed and provide a concise recent-feature scan structure with sources/verification caveats.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "我要做豆包和通义千问的 AI 搜索功能竞品调研，时间范围 2026 年 6-7 月，目标产物 Markdown 报告。对标主体是小爱同学。",
+      "expected_output": "Should enter report execution mode: output scope confirmation block with 6 items pre-filled → wait for user confirmation → write research-state.md → run scope gate → create search plan → execute real web search → build source-table.md → run sources gate → generate 4-section report (background, recent actions, strategy comparison, summary) + separate process markdown. Should NOT enter case testing mode by default. Should NOT generate report without passing gates.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "帮我调研一个叫 XYZ-AI 的新产品，看看它最近有什么功能更新。",
+      "expected_output": "Should attempt real search for XYZ-AI. If sources are insufficient (below gate threshold), should output gap report only — explicitly stating what was searched, what was NOT found, why conclusions cannot be drawn, and next steps. Should NOT fabricate a report with padded 'insights/recommendations/planning directions'. Should NOT pass off model memory as real search results.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "我当前环境没有联网能力，但我想做 ChatGPT 和 Claude 的功能对比。帮我看看能做什么。",
+      "expected_output": "Should detect or be told that network is unavailable. Should declare the limitation explicitly, offer framework mode (output research framework, data collection checklist, pending verification hypotheses), and NOT fabricate conclusions. Should NOT pretend to have done real-time search. Should suggest the user provide offline materials if available.",
+      "files": []
+    }
+  ]
+}
